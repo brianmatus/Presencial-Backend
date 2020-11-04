@@ -62,7 +62,7 @@ def suma():
 
 
 
-    historial.append([now,float(number1),float(number1),operationType,result])
+    historial.append([now,float(number1),float(number2),operationType,result])
 
 
     return jsonify({
@@ -111,7 +111,7 @@ def resta():
         "result": result
     }
 
-    historial.append([now,float(number1),float(number1),operationType,result])
+    historial.append([now,float(number1),float(number2),operationType,result])
     return jsonify({
         "RESULT": data,
         "RETURNCODE" : "0",
@@ -156,7 +156,7 @@ def multiplicacion():
         "result": result
     }
 
-    historial.append([now,float(number1),float(number1),operationType,result])
+    historial.append([now,float(number1),float(number2),operationType,result])
     return jsonify({
         "RESULT": data,
         "RETURNCODE" : "0",
@@ -210,7 +210,7 @@ def division():
         "result": result
     }
 
-    historial.append([now,float(number1),float(number1),operationType,result])
+    historial.append([now,float(number1),float(number2),operationType,result])
     return jsonify({
         "RESULT": data,
         "RETURNCODE" : "0",
@@ -255,7 +255,7 @@ def potencia():
         "result": result
     }
 
-    historial.append([now,float(number1),float(number1),operationType,result])
+    historial.append([now,float(number1),float(number2),operationType,result])
     return jsonify({
        "date": now.strftime("%d/%m/%Y %H:%M:%S"),
         "RESULT": data,
@@ -300,8 +300,6 @@ def raiz():
         })
 
 
-
-
     result = pow( float(number1), 1/float(number2))
     now = datetime.now()
     data = {
@@ -312,7 +310,7 @@ def raiz():
         "result": result
     }
 
-    historial.append([now,float(number1),float(number1),operationType,result])
+    historial.append([now,float(number1),float(number2),operationType,result])
     return jsonify({
         "date": now.strftime("%d/%m/%Y %H:%M:%S"),
         "RESULT": data,
